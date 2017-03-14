@@ -1,5 +1,6 @@
 package com.jhb.componentpractice.core;
 
+import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.Application;
 import android.content.Context;
@@ -9,8 +10,15 @@ import android.support.multidex.MultiDex;
 
 import com.antfortune.freeline.FreelineCore;
 import com.jhb.componentpractice.BuildConfig;
+import com.jhb.componentpractice.R;
+import com.shopin.commonlibrary.permission.DialogText;
+import com.shopin.commonlibrary.permission.PermissifyConfig;
+import com.shopin.commonlibrary.utils.LogUtil;
 import com.tencent.tinker.loader.app.DefaultApplicationLike;
 import com.tinkerpatch.sdk.TinkerPatch;
+import com.zhy.changeskin.SkinManager;
+
+import java.util.HashMap;
 
 
 /**
@@ -53,6 +61,10 @@ public class AppLike extends DefaultApplicationLike {
         super.onCreate();
         initTinker();
         FreelineCore.init(getApplication());
+        LogUtil.init(isDebug());
+        initPermission();
+
+        initSkin();
     }
 
     private void initTinker() {
@@ -70,6 +82,27 @@ public class AppLike extends DefaultApplicationLike {
     private void initMultiDex(Context base) {
         MultiDex.install(base);
     }
+
+    private void initSkin() {
+        SkinManager.getInstance().init(getApplication());
+    }
+
+    private void initPermission() {
+        PermissifyConfig permissifyConfig = new PermissifyConfig.Builder()
+                .withDefaultTextForPermissions(new HashMap<String, DialogText>() {{
+                    put(Manifest.permission_group.STORAGE, new DialogText(R.string.storage_rational, R.string.storage_deny_dialog));
+                    put(Manifest.permission_group.CONTACTS, new DialogText(R.string.contact_rational, R.string.contact_deny_dialog));
+                    put(Manifest.permission_group.PHONE, new DialogText(R.string.phone_rational, R.string.phone_deny_dialog));
+                    put(Manifest.permission_group.SMS, new DialogText(R.string.sms_rational, R.string.sms_deny_dialog));
+                    put(Manifest.permission_group.CAMERA, new DialogText(R.string.camera_rational, R.string.camera_deny_dialog));
+                    put(Manifest.permission_group.LOCATION, new DialogText(R.string.location_rational, R.string.location_deny_dialog));
+                }})
+                .build();
+
+        PermissifyConfig.initDefault(permissifyConfig);
+    }
+
+
 
     public static AppLike getInstance() {
         return appLike;

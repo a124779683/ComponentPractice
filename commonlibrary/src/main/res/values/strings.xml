@@ -1,0 +1,22 @@
+<resources>
+    <string name="im_chat_msg_timetitle_yesday">昨天</string>
+    <string name="permissify_go_to_settings">去设置</string>
+    <string name="permissify_permission_rationale_title">上品折扣向您申请如下权限</string>
+    <string name="permissify_no_text_fallback">Permissify: No fallback text was provided for this permission</string>
+
+    <!-- 权限提示 -->
+    <string name="location">定位</string>
+    <string name="storage_rational">访问存储设备</string>
+    <string name="storage_deny_dialog">请允许访问存储设备，否则无法提供此功能</string>
+    <string name="contact_rational">联系人</string>
+    <string name="contact_deny_dialog">请允许访问联系人，否则无法提供此功能</string>
+    <string name="phone_rational">手机唯一标识</string>
+    <string name="phone_deny_dialog">请允许访问读取你本机的信息，否则无法提供此功能</string>
+    <string name="sms_rational">读取短信</string>
+    <string name="sms_deny_dialog">请允许访问读取短信，否则无法提供此功能</string>
+    <string name="camera_rational">相机权限，用于扫描二维码</string>
+    <string name="camera_deny_dialog">请允许访问您的相机，否则无法扫描二维码</string>
+    <string name="location_rational">定位权限，用于定位您当前的区域</string>
+    <string name="location_deny_dialog">请允许访问您的位置，提供更好的地址输入服务</string>
+
+</resources>
