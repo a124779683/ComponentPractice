@@ -1,0 +1,55 @@
+# 将 全局过滤配置应用到 建议的maindexlist中, 但 -donot-use-suggest 要关闭.
+#'*' 匹配任意数量的字符
+#'?' 匹配任意一个字符
+#'**' 匹配任何类路径和类
+#'.' 和 '/' 都可用来指定类的分割.
+#'.' 或者 '/' 的结尾会自动增加 '**'.
+#注意: 如果你要过滤内部类, 使用$*，例如: SomeClass$*.class
+
+-filter-suggest
+-keep com.shopin.android.core.**
+
+-split rx.**  # same as rx.**
+# 保证keep到主dex，application的依赖要保证都在主dex
+-keep com.baidu.**
+-keep android.support.multidex.**
+-keep com.tencent.**
+-keep com.zhy.changeskin.**
+
+# 配置可以指定这个包下类在第二dex中.
+com.google.common.**
+com.shopin.android.vp.setting.deliveryaddress.**
+com.shopin.districtpicker.**
+cn.bingoogolapple.**
+android.support.v?.**
+me.iwf.photopicker.*
+
+com.xiaoneng.**
+cn.xiaoneng.**
+me.iwf.photopicker.**
+me.yokeyword.**
+com.shopin.android.vp.**
+com.shopin.android.widget.**
+android.support.design.**
+com.jakewharton.**
+com.daimajia.**
+com.bumptech.**
+com.nineoldandroids.**
+com.flyco.**
+com.google.auto.**
+cn.iwgang.**
+io.rx_cache.**
+com.shopin.commonlibrary.widget.**
+net.sourceforge.**
+orgxn.fusesource.**
+
+com.shopin.android.adapter.**
+com.shopin.android.jsbridge.**
+h?.**
+com.tsy.**
+
+-dex-param --set-max-idx-number=50000
+# 显示miandex的日志
+-log-mainlist
+# log the filter list for suggest classes of maindexlist, if -filter-suggest is enabled.
+-log-filter-suggest
