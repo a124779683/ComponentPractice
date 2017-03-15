@@ -15,7 +15,7 @@
 -keep android.support.multidex.**
 -keep com.tencent.**
 -keep com.zhy.changeskin.**
-
+-keep com.jhb.home.HomeActivity
 # 配置可以指定这个包下类在第二dex中.
 com.google.common.**
 com.shopin.android.vp.setting.deliveryaddress.**

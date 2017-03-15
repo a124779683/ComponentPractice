@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.antfortune.freeline'
+//apply plugin: 'com.antfortune.freeline'
 apply plugin: 'com.ceabie.dexnkife'
 //apply tinker插件
 apply plugin: 'com.tencent.tinker.patch'
@@ -8,12 +8,12 @@ apply plugin: 'walle'
 println '是否编译全部组件' + rootProject.ext.buildAllModule
 
 android {
-
-    freeline {
-        hack true
-        applicationProxy false
-        productFlavor 'dev'
-    }
+    useLibrary 'org.apache.http.legacy'
+//    freeline {
+//        hack true
+//        applicationProxy false
+//        productFlavor 'dev'
+//    }
 
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]

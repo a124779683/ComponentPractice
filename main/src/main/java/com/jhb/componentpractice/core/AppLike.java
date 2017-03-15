@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.os.Build;
 import android.support.multidex.MultiDex;
 
-import com.antfortune.freeline.FreelineCore;
 import com.jhb.componentpractice.BuildConfig;
 import com.jhb.componentpractice.R;
 import com.shopin.commonlibrary.permission.DialogText;
@@ -60,7 +59,7 @@ public class AppLike extends DefaultApplicationLike {
     public void onCreate() {
         super.onCreate();
         initTinker();
-        FreelineCore.init(getApplication());
+//        FreelineCore.init(getApplication());
         LogUtil.init(isDebug());
         initPermission();
 

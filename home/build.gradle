@@ -2,22 +2,34 @@ if (rootProject.ext.buildAllModule) {
     apply plugin: 'com.android.library'
 } else {
     apply plugin: 'com.android.application'
+    apply plugin: 'com.antfortune.freeline'
 }
 
 
 android {
+    useLibrary 'org.apache.http.legacy'
+    if (!rootProject.ext.buildAllModule) {
+        freeline {
+            hack true
+            applicationProxy false
+        }
+    }
+
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     buildToolsVersion rootProject.ext.android["buildToolsVersion"]
     resourcePrefix "home_"
 
     defaultConfig {
-        applicationId "com.jhb.componentpractice.home"
-
+        if (!rootProject.ext.buildAllModule) {
+            applicationId "com.jhb.home"
+        }
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
         versionCode rootProject.ext.android["versionCode"]
         versionName rootProject.ext.android["versionName"]
     }
+
+
     signingConfigs {
         release {
             storeFile file("C:\\DevelopTool\\work_info\\zjsj1492.keystore")
@@ -33,31 +45,44 @@ android {
         }
     }
 
-    buildTypes {
-        release {
-            //是否混淆
-            minifyEnabled true
-            //是否对apk进行签名
-            multiDexEnabled true
-            signingConfig signingConfigs.release
-            zipAlignEnabled true
-            shrinkResources true//去除无用的resource文件，第一次使用
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    if (rootProject.ext.buildAllModule) {
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
         }
-        debug {
-            multiDexEnabled true
-            minifyEnabled false
-            signingConfig signingConfigs.debug
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    } else {
+        buildTypes {
+            release {
+                //是否混淆
+                minifyEnabled true
+                //是否对apk进行签名
+                signingConfig signingConfigs.release
+                zipAlignEnabled true
+                shrinkResources true//去除无用的resource文件，第一次使用
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+            debug {
+                minifyEnabled false
+                signingConfig signingConfigs.debug
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
         }
     }
 
     sourceSets {
         main {
+
+            println 'home编译release清单文件' + rootProject.ext.buildAllModule
             if (rootProject.ext.buildAllModule) {
-                manifest.srcFile 'src/main/AndroidManifest.xml'
+                java {
+                    exclude '**src/main/debug/*'
+                }
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
             } else {
-                manifest.srcFile 'src/debug/AndroidManifest.xml'
+                java.srcDirs = ['src/main/java', 'src/main/debug']
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
             }
         }
     }
