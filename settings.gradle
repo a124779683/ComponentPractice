@@ -1,4 +1,5 @@
 include ':main'
+include ':home'
 include ':commonlibrary'
 include ':fragmentation'
 include ':rxerrorhandler'
