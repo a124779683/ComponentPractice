@@ -1,4 +1,4 @@
-package com.jhb.componentpractice.core;
+package com.shopin.commonlibrary.core;
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -6,16 +6,17 @@ import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
-import android.support.multidex.MultiDex;
 
-import com.jhb.componentpractice.BuildConfig;
-import com.jhb.componentpractice.R;
-import com.shopin.commonlibrary.core.CommonAppLike;
+import com.shopin.commonlibrary.BuildConfig;
+import com.shopin.commonlibrary.R;
 import com.shopin.commonlibrary.permission.DialogText;
 import com.shopin.commonlibrary.permission.PermissifyConfig;
-import com.tinkerpatch.sdk.TinkerPatch;
+import com.shopin.commonlibrary.utils.LogUtil;
+import com.tencent.tinker.loader.app.DefaultApplicationLike;
 import com.zhy.changeskin.SkinManager;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.HashMap;
 
 
@@ -23,20 +24,24 @@ import java.util.HashMap;
  * @author jianghongbo
  * @version 1.0
  * @file AppLike.java
- * @brief 替代APPLICATION的实现
+ * @brief 不要在这里初始化组件里的任何东西
  * @date 2017/12/16
  * Copyright (c) 2017
  * All rights reserved.
  */
-public class AppLike extends CommonAppLike {
+public class CommonAppLike extends DefaultApplicationLike {
 
-//    private static boolean isDebug = BuildConfig.DEBUG ? true : false;
-//    private static AppLike appLike;
+    private static Boolean isDebug;
+    private static CommonAppLike appLike;
 
-    public AppLike(Application application, int tinkerFlags, boolean tinkerLoadVerifyFlag,
-                   long applicationStartElapsedTime, long applicationStartMillisTime, Intent tinkerResultIntent) {
+    //单位，小时
+    private int tinkerUpdateInterval = 3;
+    private String versionName;
+
+    public CommonAppLike(Application application, int tinkerFlags, boolean tinkerLoadVerifyFlag,
+                         long applicationStartElapsedTime, long applicationStartMillisTime, Intent tinkerResultIntent) {
         super(application, tinkerFlags, tinkerLoadVerifyFlag, applicationStartElapsedTime, applicationStartMillisTime, tinkerResultIntent);
-//        appLike = this;
+        appLike = this;
     }
 
     /**
@@ -47,32 +52,15 @@ public class AppLike extends CommonAppLike {
     @Override
     public void onBaseContextAttached(Context base) {
         super.onBaseContextAttached(base);
-        initMultiDex(base);
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        initTinker();
-//        LogUtil.init(isDebug());
-//        initPermission();
-//        initSkin();
-    }
-
-    private void initTinker() {
-        if (BuildConfig.TINKER_ENABLE) {
-            TinkerPatch.init(this)
-                    .reflectPatchLibrary()
-                    .setPatchRollbackOnScreenOff(true)
-                    .setPatchRestartOnSrceenOff(true);
-
-            // 每隔3个小时去访问后台时候有更新,通过handler实现轮训的效果
-            new FetchPatchHandler().fetchPatchWithInterval(3);
-        }
-    }
-
-    private void initMultiDex(Context base) {
-        MultiDex.install(base);
+        CrashHandler.getInstance().init();
+        LogUtil.init(isDebug());
+        initPermission();
+        initSkin();
     }
 
     private void initSkin() {
@@ -95,12 +83,30 @@ public class AppLike extends CommonAppLike {
     }
 
 
+    public static CommonAppLike getInstance() {
+        return appLike;
+    }
 
-//    public static AppLike getInstance() {
-//        return appLike;
-//    }
-//
-//    public static boolean isDebug() {
-//        return isDebug;
-//    }
+    public static boolean isDebug() {
+        if (isDebug == null) {
+            try {
+                final Class<?> activityThread = Class.forName("android.app.ActivityThread");
+                final Method currentPackage = activityThread.getMethod("currentPackageName");
+                final String packageName = (String) currentPackage.invoke(null, (Object[]) null);
+                final Class<?> buildConfig = Class.forName(packageName + ".BuildConfig");
+                final Field DEBUG = buildConfig.getField("DEBUG");
+                DEBUG.setAccessible(true);
+                isDebug = DEBUG.getBoolean(null);
+            } catch (final Throwable t) {
+                final String message = t.getMessage();
+                if (message != null && message.contains("BuildConfig")) {
+                    // Proguard obfuscated build. Most likely a production build.
+                    isDebug = false;
+                } else {
+                    isDebug = BuildConfig.DEBUG;
+                }
+            }
+        }
+        return isDebug;
+    }
 }

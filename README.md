@@ -33,12 +33,15 @@
 
     每次切换工程都需要重新初始化工程，并且不能使用插件形式运行，只能使用命令行运行。
 4. android.library依赖注入问题
+    暂不支持ButterKnife.
+    在Library类型的Module中，R文件的ID并不是常量，这将导致ButterKnife 的ioc注入框架无法正常使用，这里的解决办法是利用Gradle动态复制一份R类生成新的R文件(K.java)，使用的时候使用新生成的K文件即可。
+    * ButterKnife已经支持library，[详情点我]("https://github.com/JakeWharton/butterknife"),或参考home模块gradle设置。使用上从R.xx.xx替换成R2.xx.xx,  点击事件只能一个一个写，不支持数组。
+    
 
-    在Library类型的Module中，R文件的ID并不是常量，这将导致ioc注入框架无法正常使用，这里的解决办法是利用Gradle动态复制一份R类生成新的R文件(K.java)，使用的时候使用新生成的K文件即可。
-
-5. module 中 Application 调用的问题
+5. module 中 Application 使用的问题
     
     组件中尽量避免调用application方法。否则在主工程中会出现转换错误，又会导致耦合度的增加。另外在主工程打包时要剔除掉我们子工程中测试的application(另外其他只是调试使用的类全部放入debug文件夹)，另外我们需要将我们在application中初始化的代码同时在主工程中初始化
+        注意：由于Tinker要求Application是不能够修改的，所以我们组件中如果有需要在Application中初始化的代码需要再AppLike中再维护一份,不要修改Real和BaseApplication。然后BaseApplication完成像网络请求 图片加载库，LOG等通用的库初始化。关于tinker的依赖都放入到commonlibrary中，不在主工程依赖
     
 6. 各组件之间的通信问题
 

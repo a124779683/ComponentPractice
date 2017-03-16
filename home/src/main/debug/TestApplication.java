@@ -14,17 +14,11 @@ import com.shopin.commonlibrary.utils.LogUtil;
  * Copyright (c) 2017, 上品折扣
  * All rights reserved.
  */
-public class TestApplication extends Application {
+public class TestApplication extends com.shopin.commonlibrary.core.BaseApplication {
 
     @Override
     public void onCreate() {
         super.onCreate();
-        Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
-            @Override
-            public void uncaughtException(Thread thread, Throwable throwable) {
-                LogUtil.i("home", throwable.getMessage());
-            }
-        });
         FreelineCore.init(this);
     }
 }

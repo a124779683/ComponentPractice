@@ -1,5 +1,6 @@
 if (rootProject.ext.buildAllModule) {
     apply plugin: 'com.android.library'
+    apply plugin: 'com.jakewharton.butterknife'
 } else {
     apply plugin: 'com.android.application'
     apply plugin: 'com.antfortune.freeline'
