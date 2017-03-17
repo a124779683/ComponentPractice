@@ -1,9 +1,7 @@
 package com.jhb.home;
 
-import android.app.Application;
 
 import com.antfortune.freeline.FreelineCore;
-import com.shopin.commonlibrary.utils.LogUtil;
 
 /**
  * @author jianghongbo

@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.jhb.util.LogUtil;
 import com.shopin.commonlibrary.api.ShopinRequestParams;
 import com.shopin.commonlibrary.api.service.ServiceManager;
 import com.shopin.commonlibrary.core.CommonAppLike;
@@ -12,9 +13,7 @@ import com.shopin.commonlibrary.core.di.AppComponent;
 import com.shopin.commonlibrary.entity.BaseEntity;
 import com.shopin.commonlibrary.entity.LoginResultEntity;
 import com.shopin.commonlibrary.mvp.BaseView;
-import com.shopin.commonlibrary.utils.LogUtil;
 
-import butterknife.ButterKnife;
 import me.jessyan.rxerrorhandler.handler.ErrorHandleSubscriber;
 import okhttp3.RequestBody;
 import rx.android.schedulers.AndroidSchedulers;
@@ -38,7 +37,6 @@ public class HomeActivity extends AppCompatActivity implements BaseView {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity_home);
-        ButterKnife.bind(this);
 
         viewById = findViewById(R.id.tv_haha);
         viewById.setOnClickListener(new View.OnClickListener() {

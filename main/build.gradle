@@ -115,7 +115,7 @@ dependencies {
     if (rootProject.ext.buildAllModule) {
         compile project(':home')
     } else {
-        compile project(':commonlibrary')
+        compile project(':CommonLib')
     }
 
 //    releaseCompile project(path: ':commonlibrary', configuration: 'release')

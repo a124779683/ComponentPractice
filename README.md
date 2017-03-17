@@ -1,35 +1,44 @@
 # 一、项目整体框架介绍
-记录项目搭建使用到的框架和项目整体框架结构，方便查阅。
 
 * 为了更好的实现并行开发，提高编译和开发效率，项目采用组件化结构，每一个模块都可以单独进行编译运行，通过config.gradle中buildAllModule可以开启和关闭。新增的模块要按照可用模块的gradle进行单独配置。
+
+* 整个项目大致分为三层，即基础层，业务层，应用层。基础层包含工具，UI等通用组件。底层为上层服务，依赖为单向。
 
 ## 项目各模块说明结构
 1. main
 
 	主工程，可以按照项目名称命名
 
-2. commonlibrary
+2. CommonLib(基础组件组成的通用业务框架)
 
 	通用类库，所有模块都必须依赖的类库。该模块主要包含常用的v4,v7包，
 	RxJava,Retrofit等网络图片模块，具体请自己查看依赖。并且提供使用频率高的控件和工具方法，主要的主题样式。（下面三个类库也属于commonlibrary的依赖）
 
-    1. fragmentation
+    1. fragmentation(基础组件)
     封装了对fragment的操作，由commonlibrary依赖。并且依赖了换肤changeSkin模块，如无需要，可去除，并将SupportActivity直接集成AppCompatActivity
     
-    2. rxerrorhandler
+    2. RxErrorHandlerModule(基础组件)
     处理Rx错误库
     
-    3. changeskin
+    3. changeskin(基础组件)
     换肤库
 
-3. dbmanager
+3. DBModule(基础组件)
 
-    数据库模块。
+    数据库模块，按需引用。由于使用的是orm框架，相关实体都定义在entity下。可能依赖会有点严重。后期考虑解决方式
     
-4. okhttpjsonmock
+4. OkHttpMockModule(基础组件)
     
-    网络请求库，按需引用
+    网络请求模拟库，按需引用
+5. UtilModule(基础组件)
     
+    工具类
+6. UIModule(基础组件)
+    
+    通用UI组件
+7. HyBirdModule(基础组件)
+
+    混合组件，webview等于H5交互的组件
     
 ## 组件化遇到的问题
 1. 模块之间清单文件的设置
