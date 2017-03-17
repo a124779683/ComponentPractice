@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_top_shap"
+        android:paddingBottom="@dimen/DIMEN_14.0PX"
+        android:paddingTop="@dimen/DIMEN_14.0PX">
+
+        <TextView
+            android:id="@+id/tv_tip_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/DIMEN_28.0PX"
+            tools:text="权限受限！"/>
+
+        <TextView
+            android:id="@+id/tv_tip_closed"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/dialog_tip_close"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_bottom_shap"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_tip_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/DIMEN_46.0PX"
+            android:paddingLeft="@dimen/default_padding"
+            android:paddingRight="@dimen/default_padding"
+            android:paddingTop="@dimen/DIMEN_44.0PX"
+            android:textColor="@color/black"
+            android:textSize="@dimen/DIMEN_28.0PX"
+            tools:text="您的账号已在其他设备登陆，如非本人操作，请在重新登陆后修改登录密码，保障账户安全"/>
+
+
+        <TextView
+            android:id="@+id/tv_tip_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/DIMEN_36.0PX"
+            android:background="@drawable/selector_bottom_btn_red"
+            android:gravity="center"
+            android:minWidth="@dimen/DIMEN_190.0PX"
+            android:paddingBottom="@dimen/DIMEN_10.0PX"
+            android:paddingLeft="@dimen/default_padding"
+            android:paddingRight="@dimen/default_padding"
+            android:paddingTop="@dimen/DIMEN_10.0PX"
+            android:textColor="@color/white"
+            android:textSize="@dimen/DIMEN_28.0PX"
+            android:visibility="gone"
+            tools:text="登陆"/>
+
+    </LinearLayout>
+</LinearLayout>

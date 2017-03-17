@@ -18,5 +18,10 @@
     <string name="camera_deny_dialog">请允许访问您的相机，否则无法扫描二维码</string>
     <string name="location_rational">定位权限，用于定位您当前的区域</string>
     <string name="location_deny_dialog">请允许访问您的位置，提供更好的地址输入服务</string>
+    <!-- 加载提示 -->
+    <string name="empty_view_hint">暂无数据</string>
+    <string name="error_view_hint">加载失败</string>
+    <string name="no_network_view_hint">网络异常</string>
+    <string name="lack_params">缺少必要参数</string>
 
 </resources>

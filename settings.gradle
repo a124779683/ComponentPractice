@@ -1,6 +1,8 @@
 include ':main'
+include ':dbmanager'
 include ':home'
 include ':commonlibrary'
 include ':fragmentation'
 include ':rxerrorhandler'
 include ':changeskin'
+include ':okhttpjsonmock'

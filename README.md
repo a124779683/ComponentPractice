@@ -22,6 +22,15 @@
     3. changeskin
     换肤库
 
+3. dbmanager
+
+    数据库模块。
+    
+4. okhttpjsonmock
+    
+    网络请求库，按需引用
+    
+    
 ## 组件化遇到的问题
 1. 模块之间清单文件的设置
 

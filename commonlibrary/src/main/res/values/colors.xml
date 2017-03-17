@@ -1,5 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="loading_color">#88000000</color>
+    <color name="skin_themeColor">#970000</color>
+    <color name="skin_item_text_color">#ff000000</color>
+    <!--应用内换肤资源-->
+    <color name="skin_themeColor_male">#1e1919</color>
+    <color name="skin_themeColor_female">#970000</color>
+    <color name="skin_themeColor_child">#59dbdc</color>
+    <!-- 主题色 -->
+    <color name="male_themeColor">#e61e1919</color>
+    <color name="female_themeColor">#e6970000</color>
+    <color name="child_themeColor">#e659dbdc</color>
+    <color name="placehold_color">@color/Color_EFEFEF</color>
+    <color name="owner_status_color">#ED6B70</color>
+    <color name="themeColorDark">#555555</color>
+    <color name="themeAccent">#FF4081</color>
+    <color name="background">@color/Color_EFEFF4</color>
+    <color name="transparent">#00000000</color>
+    <color name="half_transparent">#33000000</color>
+    <color name="Color_56000000">#56000000</color>
 
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="stroke_color">#b2b2b2</color>
+    <color name="divider_color">@color/Color_EFEFEF</color>
+    <!-- 刷新背景色 -->
+    <color name="refresh_background">#333333</color>
+
+    <!--分割块 -->
+    <color name="divider_block_color">@color/Color_EFEFF4</color>
+    <color name="tab_unselect">#c9c9c9</color>
+    <color name="bg_btn">#dadada</color>
+    <color name="result_price">#EE2B39</color>
+
+    <color name="unfocus">#55FFFFFF</color>
+    <color name="titlebar_background">@color/Color_FAFAFA</color>
+    <color name="titlebar_background_dark_theme">@color/male_themeColor</color>
+    <color name="titlebar_divider_color">#b2b2b2</color>
+    <color name="titlebar_title_color">#262626</color>
+    <color name="bottom_btn_default_color">#262626</color>
+    <color name="bottom_btn_press_color">#373737</color>
+    <color name="bottom_btn_red_color">@color/Color_FA4C55</color>
+    <color name="bottom_btn_redpress_color">@color/Color_FCB7BB</color>
+    <color name="saveaddress_dialog">#007aff</color>
+
+
+    <color name="font_title_color">@color/Color_262626</color>
+    <color name="font_primary_color">#666666</color>
+    <color name="font_secondary_color">@color/Color_999999</color>
+    <color name="font_good_result_color">#3E3A39</color>
+    <color name="font_edit_hint_color">#B5B5B6</color>
+    <color name="purple">#663AB7</color>
+    <color name="font_blue">#007aff</color>
+    <color name="Color_262626">#262626</color>
+    <color name="Color_FAFAFA">#FAFAFA</color>
+    <color name="Color_FCB7BB">#Fcb7bb</color>
+    <color name="Color_EFEFF4">#EFEFF4</color>
+    <color name="Color_999999">#999999</color>
+    <color name="Color_383838">#383838</color>
+    <color name="Color_F9F9F9">#F9F9F9</color>
+    <color name="Color_F74a55">#f74a55</color>
+    <color name="Color_E2E2E2">#E2E2E2</color>
+    <color name="Color_F74A55">#f74a55</color>
+    <color name="Color_D44040">#D44040</color>
+    <color name="Color_161618">#161618</color>
+    <color name="Color_3E3538">#3E3538</color>
+    <color name="Color_FA4C55">#FA4C55</color>
+    <color name="Color_7f000000">#1a191e</color>
+    <color name="Color_E24343">#e14245</color>
+    <color name="Color_33FFFFFF">#33FFFFFF</color>
+    <color name="Color_ABFFFFFF">#ABFFFFFF</color>
+    <color name="Color_7FFFFFFF">#7FFFFFFF</color>
+    <color name="Color_030303">#030303</color>
+    <color name="Color_0076ff">#0076ff</color>
+    <color name="Color_EFEFEF">#EFEFEF</color>
+    <color name="Color_F2F2F2">#F2F2F2</color>
+    <color name="Color_DEDEDE">#DEDEDE</color>
+    <color name="COLOR_760E19">#760e19</color>
+    <color name="COLOR_3E3A39">#3E3A39</color>
+    <color name="COLOR_F00033">#F00033</color>
+    <color name="COLOR_D0D0D0">#D0D0D0</color>
+    <color name="COLOR_E1E1E1">#E1E1E1</color>
+    <color name="COLOR_727171">#727171</color>
+    <color name="COLOR_970000">#970000</color>
+    <color name="COLOR_F9CB15">#F9CB15</color>
+    <color name="COLOR_FACD00">#facd00</color>
+    <color name="COLOR_10CF73">#10CF73</color>
+
+    <!--WheelView 遮盖未选中item的蒙层-->
+    <color name="wheel_unselect_color">#B1FFFFFF</color>
 </resources>
