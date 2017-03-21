@@ -93,6 +93,7 @@ $RECYCLE.BIN/
 #我加上避免漏掉
 *.iml
 *.properties
+!gradle-wrapper.properties
 .gradle
 .idea
 /local.properties
@@ -100,7 +101,7 @@ $RECYCLE.BIN/
 /.idea/libraries
 .DS_Store
 /build
-/gradle
+
 gradlew
 *.bat
 /captures
