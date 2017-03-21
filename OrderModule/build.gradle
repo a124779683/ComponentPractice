@@ -1,0 +1,97 @@
+if (rootProject.ext.buildAllModule) {
+    apply plugin: 'com.android.library'
+    apply plugin: 'com.jakewharton.butterknife'
+} else {
+    apply plugin: 'com.android.application'
+    apply plugin: 'com.antfortune.freeline'
+}
+
+
+android {
+    if (!rootProject.ext.buildAllModule) {
+        freeline {
+            hack true
+            applicationProxy false
+        }
+    }
+
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    resourcePrefix "order_"
+
+    defaultConfig {
+        if (!rootProject.ext.buildAllModule) {
+            applicationId "com.jhb.order"
+        }
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+    }
+
+
+    signingConfigs {
+        release {
+            storeFile file("C:\\DevelopTool\\work_info\\zjsj1492.keystore")
+            storePassword 'zjsj1492'
+            keyPassword 'zjsj1492'
+            keyAlias 'zjsj'
+        }
+        debug {
+            storeFile file("C:\\DevelopTool\\work_info\\zjsj1492.keystore")
+            storePassword 'zjsj1492'
+            keyPassword 'zjsj1492'
+            keyAlias 'zjsj'
+        }
+    }
+
+    if (rootProject.ext.buildAllModule) {
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+        }
+    } else {
+        buildTypes {
+            release {
+                //是否混淆
+                minifyEnabled true
+                //是否对apk进行签名
+                signingConfig signingConfigs.release
+                zipAlignEnabled true
+                shrinkResources true//去除无用的resource文件，第一次使用
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+            debug {
+                minifyEnabled false
+                signingConfig signingConfigs.debug
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+
+            println 'order编译release清单文件' + rootProject.ext.buildAllModule
+            if (rootProject.ext.buildAllModule) {
+                java {
+                    exclude '**src/main/debug/*'
+                }
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            } else {
+                java.srcDirs = ['src/main/java', 'src/main/debug']
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':CommonLib')
+}

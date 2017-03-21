@@ -3,17 +3,17 @@ if (rootProject.ext.buildAllModule) {
     apply plugin: 'com.jakewharton.butterknife'
 } else {
     apply plugin: 'com.android.application'
-    apply plugin: 'com.antfortune.freeline'
+//    apply plugin: 'com.antfortune.freeline'
 }
 
 
 android {
     useLibrary 'org.apache.http.legacy'
     if (!rootProject.ext.buildAllModule) {
-        freeline {
-            hack true
-            applicationProxy false
-        }
+//        freeline {
+//            hack true
+//            applicationProxy false
+//        }
     }
 
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]

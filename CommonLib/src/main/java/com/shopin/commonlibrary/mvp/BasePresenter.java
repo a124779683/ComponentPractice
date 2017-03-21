@@ -36,6 +36,9 @@ public class BasePresenter<M extends IModel, V extends BaseView> implements pres
     }
 
 
+    /**
+     * 控制器被初始化的时候自动调用
+     */
     @Override
     public void onStart() {
     }

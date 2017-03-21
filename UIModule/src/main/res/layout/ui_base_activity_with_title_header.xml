@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.jhb.ui.viewgroup.TitleHeaderBarr
+        android:id="@+id/content_frame_title_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.jhb.ui.viewgroup.MultipleStatusView
+        android:id="@+id/base_multiplestatusview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/content_frame_title_header"
+        custom:ui_emptyView="@layout/ui_empty_view"
+        custom:ui_errorView="@layout/ui_error_view"
+        custom:ui_loadingView="@layout/ui_loading_view"
+        custom:ui_noNetworkView="@layout/ui_no_network_view">
+
+        <FrameLayout
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.jhb.ui.viewgroup.MultipleStatusView>
+</RelativeLayout>

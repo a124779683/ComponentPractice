@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 
+import com.jhb.ui.dialog.BaseDialog;
 import com.jhb.util.UIUtils;
 import com.shopin.commonlibrary.R;
 

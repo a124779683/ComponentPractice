@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/dialog_view"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@drawable/ui_radius_solid_loading_color"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/ui_DIMEN_20.0PX"
+              android:paddingLeft="@dimen/ui_DIMEN_40.0PX"
+              android:paddingRight="@dimen/ui_DIMEN_40.0PX"
+              android:paddingTop="@dimen/ui_DIMEN_20.0PX"
+    >
+
+    <com.pitt.loadingview.library.LoadingView
+        android:id="@+id/loading_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        custom:color="@color/ui_white"
+        custom:progress_style="linear"
+        custom:ring_radius="20dp"
+        custom:ring_style="square"
+        custom:ring_width="3dp"/>
+
+    <TextView
+        android:id="@+id/tipTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/ui_white"
+        android:visibility="gone"
+        tools:text="text"/>
+
+</LinearLayout>

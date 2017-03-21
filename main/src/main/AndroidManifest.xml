@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="com.jhb.componentpractice"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
 
     <!-- 网络权限 -->
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -36,7 +37,8 @@
         android:icon="@mipmap/main_ic_launcher"
         android:label="@string/main_app_name"
         android:supportsRtl="true"
-        android:theme="@style/main_AppTheme">
+        android:theme="@style/main_AppTheme"
+        tools:replace="android:label">
 
         <service
             android:name="com.tencent.tinker.app.service.TinkerServerResultService"

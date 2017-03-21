@@ -91,4 +91,5 @@
 
     <!--WheelView 遮盖未选中item的蒙层-->
     <color name="ui_wheel_unselect_color">#B1FFFFFF</color>
+    <color name="ui_loading_color">#88000000</color>
 </resources>

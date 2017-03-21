@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ui_customFont">
+        <attr name="ui_font" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ui_MultipleStatusView">
+        <attr name="ui_loadingView" format="reference"/>
+        <attr name="ui_errorView" format="reference"/>
+        <attr name="ui_emptyView" format="reference"/>
+        <attr name="ui_noNetworkView" format="reference"/>
+        <attr name="ui_contentView" format="reference"/>
+    </declare-styleable>
+
+</resources>

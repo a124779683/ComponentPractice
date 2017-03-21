@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/no_network_view"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/no_network_retry_view"
+        style="@style/ui_MultipleStatusView.Content"
+        android:text="@string/ui_no_network_view_hint"
+        android:textSize="25sp"/>
+</RelativeLayout>

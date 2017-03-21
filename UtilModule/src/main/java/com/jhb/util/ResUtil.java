@@ -2,6 +2,7 @@ package com.jhb.util;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.support.annotation.StringRes;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -50,7 +51,7 @@ public class ResUtil {
      * @param stringId
      * @return
      */
-    public String getString(int stringId) {
+    public String getString(@StringRes int stringId) {
         return getResource().getString(stringId);
     }
 

@@ -1,7 +1,7 @@
 package com.jhb.home;
 
 
-import com.antfortune.freeline.FreelineCore;
+//import com.antfortune.freeline.FreelineCore;
 
 /**
  * @author jianghongbo
@@ -17,6 +17,6 @@ public class TestApplication extends com.shopin.commonlibrary.core.BaseApplicati
     @Override
     public void onCreate() {
         super.onCreate();
-        FreelineCore.init(this);
+//        FreelineCore.init(this);
     }
 }
