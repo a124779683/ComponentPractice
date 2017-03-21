@@ -5,7 +5,7 @@ import android.text.TextUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializer;
-import com.shopin.commonlibrary.entity.WrapGsonDeserializerInfo;
+import com.jhb.network.WrapGsonDeserializerInfo;
 
 import org.json.JSONArray;
 import org.json.JSONException;

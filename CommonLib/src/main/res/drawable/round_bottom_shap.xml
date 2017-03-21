@@ -4,7 +4,7 @@
     <solid android:color="#ffffff" />
 
     <corners
-        android:bottomLeftRadius="@dimen/general_stroke_radius"
-        android:bottomRightRadius="@dimen/general_stroke_radius" />
+        android:bottomLeftRadius="@dimen/ui_general_stroke_radius"
+        android:bottomRightRadius="@dimen/ui_general_stroke_radius" />
 
 </shape>

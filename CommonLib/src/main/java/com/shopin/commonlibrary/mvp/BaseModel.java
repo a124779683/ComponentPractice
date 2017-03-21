@@ -1,8 +1,8 @@
 package com.shopin.commonlibrary.mvp;
 
 
-import com.shopin.commonlibrary.http.BaseCacheManager;
-import com.shopin.commonlibrary.http.BaseServiceManager;
+import com.jhb.network.http.BaseCacheManager;
+import com.jhb.network.http.BaseServiceManager;
 
 /**
  * Created by jess on 8/5/16 12:55

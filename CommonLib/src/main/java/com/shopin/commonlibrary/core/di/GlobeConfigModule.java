@@ -3,9 +3,9 @@ package com.shopin.commonlibrary.core.di;
 import android.app.Application;
 import android.text.TextUtils;
 
+import com.jhb.network.http.GlobeHttpHandler;
 import com.jhb.util.DataHelper;
 import com.jhb.util.Preconditions;
-import com.shopin.commonlibrary.http.GlobeHttpHandler;
 
 import java.io.File;
 import java.util.ArrayList;

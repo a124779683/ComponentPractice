@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:background="@color/skin_themeColor"
+                android:layout_height="@dimen/ui_titlebar_height">
+
+    <!-- 中间标题 -->
+    <RelativeLayout
+        android:id="@+id/rl_title_bar_center"
+        style="@style/ui_wrap_wrap"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_title_bar_title"
+            style="@style/ui_title_bar_font_style"
+            tools:text="specialName"/>
+    </RelativeLayout>
+
+    <!-- 左边容器 -->
+    <RelativeLayout
+        android:id="@+id/rl_title_bar_left"
+        style="@style/ui_wrap_match"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingLeft="@dimen/ui_DIMEN_28.0PX"
+        android:paddingRight="@dimen/ui_DIMEN_28.0PX">
+
+        <ImageView
+            android:id="@+id/iv_title_bar_left"
+            android:layout_width="@dimen/ui_DIMEN_20.0PX"
+            android:layout_height="@dimen/ui_DIMEN_37.0PX"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/back_arrow_white"/>
+    </RelativeLayout>
+
+    <!-- 右边容器 -->
+    <RelativeLayout
+        android:id="@+id/rl_title_bar_right"
+        style="@style/ui_wrap_match"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingLeft="@dimen/ui_DIMEN_28.0PX"
+        android:paddingRight="@dimen/ui_DIMEN_28.0PX">
+
+        <ImageView
+            android:id="@+id/iv_title_bar_right"
+            style="@style/ui_wrap_wrap"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/tv_title_bar_right"
+            style="@style/ui_wrap_wrap"
+            android:layout_centerInParent="true"
+            android:textColor="@color/ui_white"
+            android:textStyle="normal"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/title_header_divider"
+        style="@style/ui_divider_line_titlebar"/>
+</RelativeLayout>

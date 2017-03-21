@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="skin_themeColor" tools:ignore="ResourceName">#970000</color>
+    <color name="skin_item_text_color" tools:ignore="ResourceName">#ff000000</color>
+    <!--应用内换肤资源-->
+    <color name="skin_themeColor_male" tools:ignore="ResourceName">#1e1919</color>
+    <color name="skin_themeColor_female" tools:ignore="ResourceName">#970000</color>
+    <color name="skin_themeColor_child" tools:ignore="ResourceName">#59dbdc</color>
+    <!-- 主题色 -->
+    <color name="ui_male_themeColor">#e61e1919</color>
+    <color name="ui_female_themeColor">#e6970000</color>
+    <color name="ui_child_themeColor">#e659dbdc</color>
+    <color name="ui_placehold_color">@color/ui_Color_EFEFEF</color>
+    <color name="ui_owner_status_color">#ED6B70</color>
+    <color name="ui_themeColorDark">#555555</color>
+    <color name="ui_themeAccent">#FF4081</color>
+    <color name="ui_background">@color/ui_Color_EFEFF4</color>
+    <color name="ui_transparent">#00000000</color>
+    <color name="ui_half_transparent">#33000000</color>
+    <color name="ui_Color_56000000">#56000000</color>
+
+    <color name="ui_colorPrimary">#3F51B5</color>
+    <color name="ui_colorPrimaryDark">#303F9F</color>
+    <color name="ui_colorAccent">#FF4081</color>
+    <color name="ui_white">#ffffff</color>
+    <color name="ui_black">#000000</color>
+    <color name="ui_stroke_color">#b2b2b2</color>
+    <color name="ui_divider_color">@color/ui_Color_EFEFEF</color>
+    <!-- 刷新背景色 -->
+    <color name="ui_refresh_background">#333333</color>
+
+    <!--分割块 -->
+    <color name="ui_divider_block_color">@color/ui_Color_EFEFF4</color>
+    <color name="ui_tab_unselect">#c9c9c9</color>
+    <color name="ui_bg_btn">#dadada</color>
+    <color name="ui_result_price">#EE2B39</color>
+
+    <color name="ui_unfocus">#55FFFFFF</color>
+    <color name="ui_titlebar_background">@color/ui_Color_FAFAFA</color>
+    <color name="ui_titlebar_background_dark_theme">@color/ui_male_themeColor</color>
+    <color name="ui_titlebar_divider_color">#b2b2b2</color>
+    <color name="ui_titlebar_title_color">#262626</color>
+    <color name="ui_bottom_btn_default_color">#262626</color>
+    <color name="ui_bottom_btn_press_color">#373737</color>
+    <color name="ui_bottom_btn_red_color">@color/ui_Color_FA4C55</color>
+    <color name="ui_bottom_btn_redpress_color">@color/ui_Color_FCB7BB</color>
+    <color name="ui_saveaddress_dialog">#007aff</color>
+
+
+    <color name="ui_font_title_color">@color/ui_Color_262626</color>
+    <color name="ui_font_primary_color">#666666</color>
+    <color name="ui_font_secondary_color">@color/ui_Color_999999</color>
+    <color name="ui_font_good_result_color">#3E3A39</color>
+    <color name="ui_font_edit_hint_color">#B5B5B6</color>
+    <color name="ui_purple">#663AB7</color>
+    <color name="ui_font_blue">#007aff</color>
+    <color name="ui_Color_262626">#262626</color>
+    <color name="ui_Color_FAFAFA">#FAFAFA</color>
+    <color name="ui_Color_FCB7BB">#Fcb7bb</color>
+    <color name="ui_Color_EFEFF4">#EFEFF4</color>
+    <color name="ui_Color_999999">#999999</color>
+    <color name="ui_Color_383838">#383838</color>
+    <color name="ui_Color_F9F9F9">#F9F9F9</color>
+    <color name="ui_Color_F74a55">#f74a55</color>
+    <color name="ui_Color_E2E2E2">#E2E2E2</color>
+    <color name="ui_Color_F74A55">#f74a55</color>
+    <color name="ui_Color_D44040">#D44040</color>
+    <color name="ui_Color_161618">#161618</color>
+    <color name="ui_Color_3E3538">#3E3538</color>
+    <color name="ui_Color_FA4C55">#FA4C55</color>
+    <color name="ui_Color_7f000000">#1a191e</color>
+    <color name="ui_Color_E24343">#e14245</color>
+    <color name="ui_Color_33FFFFFF">#33FFFFFF</color>
+    <color name="ui_Color_ABFFFFFF">#ABFFFFFF</color>
+    <color name="ui_Color_7FFFFFFF">#7FFFFFFF</color>
+    <color name="ui_Color_030303">#030303</color>
+    <color name="ui_Color_0076ff">#0076ff</color>
+    <color name="ui_Color_EFEFEF">#EFEFEF</color>
+    <color name="ui_Color_F2F2F2">#F2F2F2</color>
+    <color name="ui_Color_DEDEDE">#DEDEDE</color>
+    <color name="ui_COLOR_760E19">#760e19</color>
+    <color name="ui_COLOR_3E3A39">#3E3A39</color>
+    <color name="ui_COLOR_F00033">#F00033</color>
+    <color name="ui_COLOR_D0D0D0">#D0D0D0</color>
+    <color name="ui_COLOR_E1E1E1">#E1E1E1</color>
+    <color name="ui_COLOR_727171">#727171</color>
+    <color name="ui_COLOR_970000">#970000</color>
+    <color name="ui_COLOR_F9CB15">#F9CB15</color>
+    <color name="ui_COLOR_FACD00">#facd00</color>
+    <color name="ui_COLOR_10CF73">#10CF73</color>
+
+    <!--WheelView 遮盖未选中item的蒙层-->
+    <color name="ui_wheel_unselect_color">#B1FFFFFF</color>
+</resources>

@@ -19,10 +19,7 @@ public class Api {
     public final static String IMAGE_HOST = "http://images.shopin.net/images";
     //测试数据文件位置
     public final static String API_TEST = "api/test/";
-    //数据请求类型
-    public final static String CONTENT_TYPE_JSON = "Content-type:application/json;charset=UTF-8";
-    public final static String CONTENT_TYPE_FORM = "Content-type:application/x-www-form-urlencoded;charset=UTF-8";
-    public final static String CONTENT_TYPE_MULTI = "Content-type:multipart/form-data;charset=UTF-8";
+
     //首页地址
     public final static String SUFFIX_H5_URL = "http://172.16.103.145:9002/h5/";
     public final static String SUFFIX_CMS_URL = "http://172.16.200.2/";

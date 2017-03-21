@@ -5,7 +5,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.TypeAdapter;
 import com.google.gson.reflect.TypeToken;
-import com.shopin.commonlibrary.entity.WrapGsonDeserializerInfo;
+import com.jhb.network.WrapGsonDeserializerInfo;
 import com.shopin.commonlibrary.utils.dataprocess.DoubleMayBeEmptyStringDeserializer;
 import com.shopin.commonlibrary.utils.dataprocess.IntegerMayBeEmptyStringDeserializer;
 

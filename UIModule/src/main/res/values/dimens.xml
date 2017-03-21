@@ -1,0 +1,36 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="ui_activity_horizontal_margin">16dp</dimen>
+    <dimen name="ui_activity_vertical_margin">16dp</dimen>
+
+    <!-- yalantis -->
+    <dimen name="ui_refresh_header_height_yalantis">136dp</dimen>
+    <!-- jd -->
+    <dimen name="ui_refresh_header_height_jd">100dp</dimen>
+
+    <!-- 标题栏高度 -->
+    <dimen name="ui_titlebar_height">@dimen/ui_DIMEN_82.0PX</dimen>
+    <!-- 默认内边距 -->
+    <dimen name="ui_default_padding">@dimen/ui_DIMEN_20.0PX</dimen>
+    <!-- 收货地址默认内边距 -->
+    <dimen name="ui_address_padding">@dimen/ui_DIMEN_40.0PX</dimen>
+    <!-- Navigator的高度 -->
+    <dimen name="ui_navigator_height">@dimen/ui_DIMEN_98.0PX</dimen>
+    <!-- 设置里每一个ITEM的高度 -->
+    <dimen name="ui_setting_item_height">@dimen/ui_DIMEN_102.0PX</dimen>
+    <!-- 边框的角度 -->
+    <dimen name="ui_general_stroke_radius">8px</dimen>
+    <!-- 边框的宽度 -->
+    <dimen name="ui_general_stroke_width">1px</dimen>
+    <dimen name="ui_xxs_font_size">@dimen/ui_DIMEN_20.0PX</dimen>
+    <dimen name="ui_xs_font_size">@dimen/ui_DIMEN_22.0PX</dimen>
+    <dimen name="ui_s_font_size">@dimen/ui_DIMEN_24.0PX</dimen>
+    <dimen name="ui_m_font_size">@dimen/ui_DIMEN_26.0PX</dimen>
+    <dimen name="ui_l_font_size">@dimen/ui_DIMEN_28.0PX</dimen>
+    <dimen name="ui_xl_font_size">@dimen/ui_DIMEN_30.0PX</dimen>
+    <dimen name="ui_xxl_font_size">@dimen/ui_DIMEN_32.0PX</dimen>
+    <dimen name="ui_xxxl_font_size">@dimen/ui_DIMEN_34.0PX</dimen>
+    <dimen name="ui_xxxxl_font_size">@dimen/ui_DIMEN_36.0PX</dimen>
+    <dimen name="ui_primary_font_size">@dimen/ui_DIMEN_26.0PX</dimen>
+    <dimen name="ui_second_font_size">@dimen/ui_DIMEN_24.0PX</dimen>
+</resources>

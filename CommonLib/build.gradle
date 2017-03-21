@@ -38,28 +38,17 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile rootProject.ext.dependencies["junit"]
     compile project(':Fragmentation')
-    compile project(':RxErrorHandleModule')
     compile project(':UIModule')
     compile project(':UtilModule')
-    compile project(':RxErrorHandleModule')
-
-    //Sysmtem bar
-    compile rootProject.ext.dependencies["systembar"]
+    compile project(':NetWorkModule')
     compile rootProject.ext.dependencies["rxlifecycle"]
     compile rootProject.ext.dependencies["rxlifecycle-components"]
-    compile rootProject.ext.dependencies["rxjava"]
-    compile rootProject.ext.dependencies["rxandroid"]
-    compile rootProject.ext.dependencies["rxcache"]
-    compile rootProject.ext.dependencies["rxcache-jolyglot-gson"]
+    //Sysmtem bar
+    compile rootProject.ext.dependencies["systembar"]
     provided rootProject.ext.dependencies["javax.annotation"]
-    compile rootProject.ext.dependencies["retrofit"]
-    compile rootProject.ext.dependencies["retrofit-converter-gson"]
-    compile rootProject.ext.dependencies["retrofit-adapter-rxjava"]
     compile rootProject.ext.dependencies["dagger2"]
     apt rootProject.ext.dependencies["dagger2-apt-compiler"]
-    compile rootProject.ext.dependencies["okhttp3"]
     compile rootProject.ext.dependencies["glide"]
-    compile rootProject.ext.dependencies["gson"]
     //butterknife
 //    compile rootProject.ext.dependencies["butterknife"]
 //    compile rootProject.ext.dependencies["butterknife-apt"]

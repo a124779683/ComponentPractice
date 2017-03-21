@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/round_top_shap"
-        android:paddingBottom="@dimen/DIMEN_14.0PX"
-        android:paddingTop="@dimen/DIMEN_14.0PX">
+        android:paddingBottom="@dimen/ui_DIMEN_14.0PX"
+        android:paddingTop="@dimen/ui_DIMEN_14.0PX">
 
         <TextView
             android:id="@+id/tv_tip_title"
@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:textColor="@color/white"
-            android:textSize="@dimen/DIMEN_28.0PX"
+            android:textSize="@dimen/ui_DIMEN_28.0PX"
             tools:text="权限受限！"/>
 
         <TextView
@@ -45,12 +45,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingBottom="@dimen/DIMEN_46.0PX"
-            android:paddingLeft="@dimen/default_padding"
-            android:paddingRight="@dimen/default_padding"
-            android:paddingTop="@dimen/DIMEN_44.0PX"
+            android:paddingBottom="@dimen/ui_DIMEN_46.0PX"
+            android:paddingLeft="@dimen/ui_default_padding"
+            android:paddingRight="@dimen/ui_default_padding"
+            android:paddingTop="@dimen/ui_DIMEN_44.0PX"
             android:textColor="@color/black"
-            android:textSize="@dimen/DIMEN_28.0PX"
+            android:textSize="@dimen/ui_DIMEN_28.0PX"
             tools:text="您的账号已在其他设备登陆，如非本人操作，请在重新登陆后修改登录密码，保障账户安全"/>
 
 
@@ -58,16 +58,16 @@
             android:id="@+id/tv_tip_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/DIMEN_36.0PX"
+            android:layout_marginBottom="@dimen/ui_DIMEN_36.0PX"
             android:background="@drawable/selector_bottom_btn_red"
             android:gravity="center"
-            android:minWidth="@dimen/DIMEN_190.0PX"
-            android:paddingBottom="@dimen/DIMEN_10.0PX"
-            android:paddingLeft="@dimen/default_padding"
-            android:paddingRight="@dimen/default_padding"
-            android:paddingTop="@dimen/DIMEN_10.0PX"
-            android:textColor="@color/white"
-            android:textSize="@dimen/DIMEN_28.0PX"
+            android:minWidth="@dimen/ui_DIMEN_190.0PX"
+            android:paddingBottom="@dimen/ui_DIMEN_10.0PX"
+            android:paddingLeft="@dimen/ui_default_padding"
+            android:paddingRight="@dimen/ui_default_padding"
+            android:paddingTop="@dimen/ui_DIMEN_10.0PX"
+            android:textColor="@color/ui_white"
+            android:textSize="@dimen/ui_DIMEN_28.0PX"
             android:visibility="gone"
             tools:text="登陆"/>
 

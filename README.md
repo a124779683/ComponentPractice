@@ -52,9 +52,6 @@
     每次切换工程都需要重新初始化工程，并且不能使用插件形式运行，只能使用命令行运行。
 4. android.library依赖注入问题
     暂不支持ButterKnife.
-    在Library类型的Module中，R文件的ID并不是常量，这将导致ButterKnife 的ioc注入框架无法正常使用，这里的解决办法是利用Gradle动态复制一份R类生成新的R文件(K.java)，使用的时候使用新生成的K文件即可。
-    * ButterKnife已经支持library，[详情点我]("https://github.com/JakeWharton/butterknife"),或参考home模块gradle设置。使用上从R.xx.xx替换成R2.xx.xx,  点击事件只能一个一个写，不支持数组。
-    
 
 5. module 中 Application 使用的问题
     
@@ -65,6 +62,10 @@
 
     理想状态下各组件之间应该是相互独立的，但是业务需求注定了他们之间需要有相互联系的桥梁。一个合理的路由机制能够解决跨 module 的 Activity 或 Fragment 跳转问题
 
+7. 组件的划分范围
+    
+    最头疼的就是这个问题了，因为数据和业务关系紧密。为了保证组件间相互隔离，想破了头，我觉得在业务划分上必须要确立一个原则，就是互相间有相关性的划分到一个组件中。具体实践的话，以使用的实体类为一个界限来找。
+    
 ## Junit和Espresso测试
 每个模块提供Test和AndroidTest，分别对应测试基于纯JVM和Android的测试用例。
 

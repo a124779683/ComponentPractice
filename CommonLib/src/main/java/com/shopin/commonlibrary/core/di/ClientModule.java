@@ -2,13 +2,13 @@ package com.shopin.commonlibrary.core.di;
 
 import android.app.Application;
 
-import com.shopin.commonlibrary.api.MyCacheSpeak;
+import com.jhb.network.MyCacheSpeak;
+import com.jhb.network.WrapGsonDeserializerInfo;
 import com.shopin.commonlibrary.api.ShopinGsonConverterFactory;
+import com.shopin.commonlibrary.api.interceptor.RequestIntercept;
 import com.shopin.commonlibrary.core.AppManager;
 import com.shopin.commonlibrary.entity.UserEntity;
 import com.shopin.commonlibrary.entity.UserMayBeEmptyStringDeserializer;
-import com.shopin.commonlibrary.entity.WrapGsonDeserializerInfo;
-import com.shopin.commonlibrary.http.RequestIntercept;
 
 import java.io.File;
 import java.util.ArrayList;

@@ -4,6 +4,8 @@ import android.app.Application;
 import android.os.Handler;
 
 import com.google.gson.Gson;
+import com.shopin.commonlibrary.utils.cache.ACache;
+import com.shopin.commonlibrary.utils.cache.ICache;
 
 import javax.inject.Singleton;
 
@@ -39,6 +41,12 @@ public class AppModule {
     @Provides
     public Handler provideHandler() {
         return handler;
+    }
+
+    @Singleton
+    @Provides
+    public ICache provideCache() {
+        return ACache.get(mApplication);
     }
 
 }

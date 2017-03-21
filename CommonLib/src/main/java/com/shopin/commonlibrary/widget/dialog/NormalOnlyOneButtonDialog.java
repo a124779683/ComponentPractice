@@ -61,7 +61,7 @@ public class NormalOnlyOneButtonDialog extends BaseDialog {
     /**
      * title textsize(标题字体大小,单位sp)
      */
-    private float titleTextSize_PX =context.get().getResources().getDimensionPixelSize(R.dimen.DIMEN_28_0PX);;
+    private float titleTextSize_PX =context.get().getResources().getDimensionPixelSize(R.dimen.ui_DIMEN_28_0PX);
     /**
      * enable title show(是否显示标题)
      */
@@ -89,7 +89,7 @@ public class NormalOnlyOneButtonDialog extends BaseDialog {
     /**
      * content textsize(正文字体大小)
      */
-    private float contentTextSize_SP = context.get().getResources().getDimensionPixelSize(R.dimen.DIMEN_28_0PX);
+    private float contentTextSize_SP = context.get().getResources().getDimensionPixelSize(R.dimen.ui_DIMEN_28_0PX);
     /**
      * btn textcolor(按钮字体颜色)
      */
@@ -98,8 +98,8 @@ public class NormalOnlyOneButtonDialog extends BaseDialog {
     /**
      * btn textsize(按钮字体大小)
      */
-    private float btnLeftTextSize_SP = context.get().getResources().getDimensionPixelSize(R.dimen.DIMEN_26_0PX);
-    private float btnRightTextSize_SP = context.get().getResources().getDimensionPixelSize(R.dimen.DIMEN_26_0PX);
+    private float btnLeftTextSize_SP = context.get().getResources().getDimensionPixelSize(R.dimen.ui_DIMEN_26_0PX);
+    private float btnRightTextSize_SP = context.get().getResources().getDimensionPixelSize(R.dimen.ui_DIMEN_26_0PX);
     /**
      * btn press color(按钮点击颜色)
      */

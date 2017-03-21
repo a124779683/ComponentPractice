@@ -3,6 +3,7 @@ package com.shopin.commonlibrary.api;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
+import com.jhb.network.HttpConstants;
 import com.jhb.util.AppUtil;
 import com.shopin.commonlibrary.core.CommonAppLike;
 import com.shopin.commonlibrary.utils.dataprocess.GsonUtil;
@@ -57,7 +58,7 @@ public class ShopinRequestParams {
             //添加公共参数
             addCommonParams();
             String body = GsonUtil.bean2json(map);
-            return RequestBody.create(MediaType.parse(Api.CONTENT_TYPE_FORM), body);
+            return RequestBody.create(MediaType.parse(HttpConstants.CONTENT_TYPE_FORM), body);
         }
 
         /**

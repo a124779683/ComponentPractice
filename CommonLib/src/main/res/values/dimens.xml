@@ -1,36 +1,3 @@
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <!-- yalantis -->
-    <dimen name="refresh_header_height_yalantis">136dp</dimen>
-    <!-- jd -->
-    <dimen name="refresh_header_height_jd">100dp</dimen>
-
-    <!-- 标题栏高度 -->
-    <dimen name="titlebar_height">@dimen/DIMEN_82.0PX</dimen>
-    <!-- 默认内边距 -->
-    <dimen name="default_padding">@dimen/DIMEN_20.0PX</dimen>
-    <!-- 收货地址默认内边距 -->
-    <dimen name="address_padding">@dimen/DIMEN_40.0PX</dimen>
-    <!-- Navigator的高度 -->
-    <dimen name="navigator_height">@dimen/DIMEN_98.0PX</dimen>
-    <!-- 设置里每一个ITEM的高度 -->
-    <dimen name="setting_item_height">@dimen/DIMEN_102.0PX</dimen>
-    <!-- 边框的角度 -->
-    <dimen name="general_stroke_radius">8px</dimen>
-    <!-- 边框的宽度 -->
-    <dimen name="general_stroke_width">1px</dimen>
-    <dimen name="xxs_font_size">@dimen/DIMEN_20.0PX</dimen>
-    <dimen name="xs_font_size">@dimen/DIMEN_22.0PX</dimen>
-    <dimen name="s_font_size">@dimen/DIMEN_24.0PX</dimen>
-    <dimen name="m_font_size">@dimen/DIMEN_26.0PX</dimen>
-    <dimen name="l_font_size">@dimen/DIMEN_28.0PX</dimen>
-    <dimen name="xl_font_size">@dimen/DIMEN_30.0PX</dimen>
-    <dimen name="xxl_font_size">@dimen/DIMEN_32.0PX</dimen>
-    <dimen name="xxxl_font_size">@dimen/DIMEN_34.0PX</dimen>
-    <dimen name="xxxxl_font_size">@dimen/DIMEN_36.0PX</dimen>
-    <dimen name="primary_font_size">@dimen/DIMEN_26.0PX</dimen>
-    <dimen name="second_font_size">@dimen/DIMEN_24.0PX</dimen>
 </resources>

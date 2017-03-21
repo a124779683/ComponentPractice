@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 水平分割线样式-->
+    <style name="ui_divider_line_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ui_DIMEN_1.0PX</item>
+        <item name="android:background">@color/ui_divider_color</item>
+    </style>
+
+    <!-- 垂直分割线样式-->
+    <style name="ui_divider_line_vertical">
+        <item name="android:layout_width">@dimen/ui_DIMEN_1.0PX</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/ui_divider_color</item>
+    </style>
+
+    <style name="ui_search_vertical" parent="ui_divider_line_vertical">
+        <item name="android:layout_height">@dimen/ui_DIMEN_22.0PX</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <!-- 标题栏分割线样式-->
+    <style name="ui_divider_line_titlebar" parent="ui_divider_line_horizontal">
+        <item name="android:background">@color/ui_Color_EFEFEF</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <!-- 宽度MATCH 高度包裹WRAP-->
+    <style name="ui_match_wrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- 宽度MATCH 高度MATCH-->
+    <style name="ui_match_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- 宽度wrap 高度包裹match-->
+    <style name="ui_wrap_match">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- 宽度wrap 高度包裹wrap-->
+    <style name="ui_wrap_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- 宽度auto 高度包裹wrap-->
+    <style name="ui_auto_wrap">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!-- 宽度auto 高度包裹wrap-->
+    <style name="ui_auto_match">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- 宽度wrap 高度包裹auto -->
+    <style name="ui_wrap_auto">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <!-- 标题栏标题样式-->
+    <style name="ui_title_bar_font_style" parent="ui_tvBaseStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/ui_Color_F2F2F2</item>
+        <item name="android:textSize">@dimen/ui_DIMEN_36.0PX</item>
+    </style>
+
+    <!-- 自定义dialog属性 -->
+    <style name="ui_loading_style" parent="android:style/Theme.Dialog">
+        <!--背景颜色及透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+    <!-- window、dialog使用 -->
+    <style name="ui_AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+
+    <!-- TextView统一样式-->
+    <style name="ui_tvBaseStyle">
+        <!-- 进入时的动画 -->
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <!-- EditTextView统一样式-->
+    <style name="ui_etBaseStyle" parent="ui_tvBaseStyle">
+        <!-- 进入时的动画 -->
+        <item name="android:background">@null</item>
+        <item name="android:textCursorDrawable">@drawable/ui_cursor_style</item>
+    </style>
+
+    <!-- CheckBox统一样式-->
+    <style name="ui_cbBaseStyle" parent="@android:style/Widget.CompoundButton.CheckBox"></style>
+
+    <!-- 4.	Button统一样式-->
+    <style name="ui_btnBaseStyle"></style>
+
+    <!-- 5.	ListView统一样式-->
+    <style name="ui_lvBaseStyle">
+        <item name="android:overScrollMode">never</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:divider">@null</item>
+        <item name="android:listSelector">@null</item>
+    </style>
+
+    <!-- 5.	GridView统一样式-->
+    <style name="ui_gvBaseStyle">
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+    <!-- 6.	RecyclerView统一样式-->
+    <style name="ui_rvBaseStyle">
+        <item name="android:overScrollMode">never</item>
+    </style>
+
+    <!-- 包裹内容的TextView统一样式-->
+    <style name="ui_wrapTvBaseStyle" parent="ui_tvBaseStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

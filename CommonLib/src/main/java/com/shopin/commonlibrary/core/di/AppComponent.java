@@ -4,8 +4,10 @@ import android.app.Application;
 import android.os.Handler;
 
 import com.google.gson.Gson;
-import com.shopin.commonlibrary.api.cache.CacheManager;
-import com.shopin.commonlibrary.api.service.ServiceManager;
+import com.jhb.network.CacheModule;
+import com.jhb.network.ServiceModule;
+import com.jhb.network.cache.CacheManager;
+import com.jhb.network.service.ServiceManager;
 import com.shopin.commonlibrary.core.AppManager;
 import com.shopin.commonlibrary.imageloader.ImageLoader;
 import com.shopin.commonlibrary.utils.cache.ICache;
@@ -51,9 +53,5 @@ public interface AppComponent {
 
     Handler getHandler();
 
-    /**
-     * 获得缓存实现类
-     * @return
-     */
     ICache getCacheUtil();
 }
