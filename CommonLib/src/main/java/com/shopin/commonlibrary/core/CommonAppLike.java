@@ -5,9 +5,7 @@ import android.annotation.TargetApi;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Build;
-import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 
 import com.jhb.network.CacheModule;
@@ -280,10 +278,10 @@ public class CommonAppLike extends DefaultApplicationLike {
 
     public Interceptor createCommonParamIntercept() {
         boolean readPhonePermission = false;
-        if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.READ_PHONE_STATE)
-                == PackageManager.PERMISSION_GRANTED) {
-            readPhonePermission = true;
-        }
+//        if (ContextCompat.checkSelfPermission(getContext(), Manifest.permission.READ_PHONE_STATE)
+//                == PackageManager.PERMISSION_GRANTED) {
+//            readPhonePermission = true;
+//        }
         BasicParamsInterceptor interceptor = new BasicParamsInterceptor
                 .Builder()
                 .addParam("deviceType", "1")
