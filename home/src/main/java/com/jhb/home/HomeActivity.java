@@ -1,12 +1,14 @@
 package com.jhb.home;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.jhb.util.LogUtil;
+import com.shopin.commonlibrary.core.TitleBaseActivity;
+import com.shopin.commonlibrary.core.di.AppComponent;
 import com.shopin.commonlibrary.mvp.BaseView;
+
+import static android.view.View.GONE;
 
 /**
  * @author jianghongbo
@@ -17,47 +19,37 @@ import com.shopin.commonlibrary.mvp.BaseView;
  * Copyright (c) 2017, 上品折扣
  * All rights reserved.
  */
-public class HomeActivity extends AppCompatActivity implements BaseView {
+public class HomeActivity extends TitleBaseActivity implements BaseView {
 
-
-    private View viewById;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_activity_home);
+    protected void setupActivityComponent(AppComponent appComponent) {
 
-        viewById = findViewById(R.id.tv_haha);
-        viewById.setOnClickListener(new View.OnClickListener() {
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.home_activity_home;
+    }
+
+    @Override
+    protected void initIntentParams(Intent intent) {
+
+    }
+
+    @Override
+    protected void initViews(Bundle savedInstanceState) {
+        getTitleHeaderBar().setVisibility(GONE);
+        $(R.id.tv_haha).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                int id = view.getId();
-                if (id == R.id.tv_haha) {
-                    LogUtil.i("hahah", "freeline");
-                }
+            public void onClick(View v) {
+                showMessage("R.dfasf");
             }
         });
-
-
     }
 
     @Override
-    public void showLoading() {
+    protected void initData() {
 
-    }
-
-    @Override
-    public void hideLoading() {
-
-    }
-
-    @Override
-    public void showMessage(String message) {
-
-    }
-
-    @Override
-    public boolean isActive() {
-        return false;
     }
 }
